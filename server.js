@@ -4,7 +4,30 @@ const hbs = require('express-hbs');
 const app = express();
 const bodypaeser = requrie ("body-parser");
 const clientSession = require ("client-sessions")
+http.createServer(app).listen(HTTP_PORT, onHttpStart);
+https.createServer(https_options, app).listen(HTTPS_PORT, onHttpsStart);
+const fs = require("fs");
+const http = require("http");
+const https = require("https");
 
+function onHttpsStart() {
+    console.log("Express https server listening on: " + HTTPS_PORT);
+}
+
+const login = "./login.js/";
+const register-page= "./register-page.js/";
+const SSL_KEY_FILE = login + "server.key";
+const SSL_CRT_FILE = login + "server.crt";
+const SSL_KEY_FILE = register-page + "server.key";
+const SSL_CRT_FILE = register-page + "server.crt";
+
+// read in the contents of the HTTPS certificate and key
+const https_options = {
+    key: fs.readFileSync(__ass6+ "/login" + SSL_KEY_FILE),
+    cert: fs.readFileSync(__ass6 + "/login" + SSL_CRT_FILE)
+    key: fs.readFileSync(__ass6+ "/register-page" + SSL_KEY_FILE),
+    cert: fs.readFileSync(__ass6 + "/register-page" + SSL_CRT_FILE)
+};
 app.listen (8080);
 
 app.post("/login", fucntion(res,req){
@@ -102,4 +125,6 @@ app.get('/regist', (req,res) =>{
   const login = require('./login.routes');
 
   app.use('/login', login)
+
+
 
