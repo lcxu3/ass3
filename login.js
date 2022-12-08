@@ -2,6 +2,18 @@ const express = require("express");
 const session = require('express-session');
 const router = express.Router();
 const { checks, validateResult } = require('express-validator');
+const bcrypt = require('bcryptjs');
+http.createServer(app).listen(HTTP_PORT, onHttpStart);
+https.createServer(https_options, app).listen(HTTPS_PORT, onHttpsStart);
+
+bcrypt.hash("myPassword1234", 10).then(hash=>{ 
+var values;
+hash= values;
+})
+.catch(err=>{
+    console.log(err); 
+});
+
 
 router.post('/login-user',
     [
