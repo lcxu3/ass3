@@ -1,7 +1,17 @@
-const express = require("express");
+onst express = require("express");
 const session = require('express-session');
 const router = express.Router();
 const { checks, validateResult } = require('express-validator');
+const bcrypt = require('bcryptjs');
+
+
+bcrypt.hash("myPassword12345", 10).then(hash=>{ 
+var values;
+hash= values;
+})
+.catch(err=>{
+    console.log(err); 
+});
 
 router.get('/', function (req, res) {
     res.render('/register', {
